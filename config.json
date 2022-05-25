@@ -1,0 +1,18 @@
+{
+  "debug": false,
+  "server": {
+    "address": "8080"
+  },
+  "postgres": {
+    "host": "127.0.0.1",
+    "port": "5432",
+    "user": "postgres",
+    "pass": "postgres",
+    "name": "postgres",
+    "sslmode": "disable"
+  },
+  "ssdb": {
+    "host": "127.0.0.1",
+    "port": "8888"
+  }
+}
