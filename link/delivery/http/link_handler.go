@@ -14,8 +14,10 @@ func NewLinkHandler(e *echo.Echo, linkUseCase domain.LinkUseCase) {
 	handler := &LinkHandler{
 		linkUseCase: linkUseCase,
 	}
-	e.POST("/create/", handler.addLink)
-	e.GET("/", handler.getLink)
+	l := e.Group("/link")
+
+	l.POST("/create/", handler.addLink)
+	l.GET("/", handler.getLink)
 }
 
 func (l *LinkHandler) addLink(e echo.Context) error {
